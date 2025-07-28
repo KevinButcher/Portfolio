@@ -1,0 +1,36 @@
+{% extends 'Projects/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lange="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        {% block body %}
+            <h1 class="text-center"><strong>Welcom to my Django portfolio!</strong></h1>
+            <h3 class="text-center mt-3">My name is <span class="text-warning">Kevin Butcher</span>!</h3>
+            <h5 class="text-center">I graduated from Weber State University with a Bachelor's in Computer Science! 
+                I am currently employed with Intermountain Health as a Central Processing Senior Tech.
+                <!-- later I need to remember to pull current job title from an employment table that is not yet created (use it
+                 in my pdf resume generator)-->
+            </h5>
+            <div class="row d-flex justify-content-center">
+                <div class="">
+                    <img class="card card-deck border m-1" height="250px" src="{% static 'Projects/Business_shot_2024.jpg' %}"
+                        alt="Business Shot 2024"/> 
+                        <!-- replace the hard coded with profile picture later -->
+                    <a href="https://github.com/KevinButcher" class="mr-3 text-warning" target="_blank">
+                        <img src="{% static 'Projects/GitHubLogo.png' %}" height="17px" class="h-4 w-auto" alt="GitHub Logo"/>
+                        <span class="ms-1">Github</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/kevin-g-butcher" class="ml-3 text-warning" target="_blank">
+                        <img src="{% static 'Projects/LinkedInlogo.png' %}" height="17px" class="h-4 w-auto" alt="LinkedIn Logo"/>
+                        <span class="ms-1">LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        {% endblock %}
+    </body>
+</html>
